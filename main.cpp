@@ -120,6 +120,14 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 int main(int, char**)
 {
+#if 0
+	auto w = webview_create(true, nullptr);
+	webview_set_title(w, "Minimal example");
+	webview_set_size(w, 480, 320, WEBVIEW_HINT_NONE);
+	webview_navigate(w, "https://en.m.wikipedia.org/wiki/Main_Page");
+	webview_run(w);
+#endif
+
 	// Create application window
 	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, LoadCursor(NULL, IDC_ARROW), NULL, NULL, _T("ImGui Example"), NULL };
 	RegisterClassEx(&wc);

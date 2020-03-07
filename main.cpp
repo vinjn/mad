@@ -7,12 +7,16 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
+
+#include "ImGuiColorTextEdit/TextEditor.h"
+
+#define WEBVIEW_HEADER
+#include "webview/webview.h"
+
 #include <d3d11.h>
 #define DIRECTINPUT_VERSION 0x0800
 #include <dinput.h>
 #include <tchar.h>
-
-#include "ImGuiColorTextEdit/TextEditor.h"
 
 // Data
 static ID3D11Device*            g_pd3dDevice = NULL;
